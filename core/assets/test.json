@@ -1,0 +1,22 @@
+{
+  "com.badlogic.gdx.graphics.g2d.BitmapFont":
+  {
+    "text": { "file": "myCustomFont.fnt" }
+  },
+  "com.badlogic.gdx.graphics.Color":
+  {
+    "white": { "hex": "FFFFFF" },
+    "green": { "hex": "99CC00" },
+    "red": { "r": 1, "g": 0, "b": 0, "a": 1}
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle":
+  {
+    "default": {"font": "text", "fontColor": "white", "background": "label.9"}
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle": {
+    "default": { "down": "label.9", "up": "label.9", "font": "text", "fontColor": "white" }
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle": {
+    "default": { "titleFont": "text", "background": "label.9", "titleFontColor": "green" }
+  }
+}
