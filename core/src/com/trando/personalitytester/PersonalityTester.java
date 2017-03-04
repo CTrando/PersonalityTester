@@ -33,21 +33,28 @@ public class PersonalityTester extends ApplicationAdapter {
 		viewport = new ScreenViewport(camera);
 		stage = new Stage(viewport, batch);
 
-		skin = new Skin(Gdx.files.internal("test.json"));
+		skin = new Skin(Gdx.files.internal("resources.json"));
 
-		stage.setDebugAll(true);
+		//stage.setDebugAll(true);
 		questions = new LinkedList<Question>();
 
 		initQuestions();
 		currentQuestion = questions.poll();
-		currentQuestion.getDialog().show(stage);
+		//currentQuestion.getDialog().show(stage);
 
+		table = new Table();
+		table.setFillParent(true);
+		stage.addActor(table);
+
+		Dialogue dialogue = new Dialogue(skin);
+		table.add(dialogue).expand().width(Gdx.graphics.getWidth()).bottom().left();
 
 		Gdx.input.setInputProcessor(stage);
 	}
 
 	@Override
 	public void render () {
+
 		if(currentQuestion != null && currentQuestion.isFinished()){
 			nextQuestion();
 		}
@@ -69,6 +76,7 @@ public class PersonalityTester extends ApplicationAdapter {
 	public void resize(int width, int height){
 		viewport.update(width,height, true);
 		camera.update();
+		table.setWidth(width);
 	}
 
 	private void initQuestions(){

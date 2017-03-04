@@ -11,13 +11,11 @@ import com.badlogic.gdx.utils.*;
 public class Question {
     String question;
     Array<Answer> answers;
-    JsonValue value;
 
     Dialog dialog;
     boolean isFinished;
 
     public Question(JsonValue value){
-        this.value = value;
         answers = new Array<Answer>();
 
         this.initQuestion(value);
