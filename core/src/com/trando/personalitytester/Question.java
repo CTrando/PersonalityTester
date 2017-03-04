@@ -1,8 +1,5 @@
 package com.trando.personalitytester;
 
-import com.badlogic.gdx.scenes.scene2d.Action;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.utils.*;
 
 /**
@@ -12,7 +9,7 @@ public class Question {
     String question;
     Array<Answer> answers;
 
-    Dialog dialog;
+    Dialogue dialogue;
     boolean isFinished;
 
     public Question(JsonValue value){
@@ -31,26 +28,22 @@ public class Question {
     }
 
     private void initDialog(){
-        dialog = new Dialog(question, PersonalityTester.skin){
-            @Override
-            protected void result(Object object) {
-                Answer answer = (Answer) object;
-                PersonalityTester.value += answer.pValue;
-                isFinished = true;
-            }
-        };
-
-        for(Answer answer: answers){
-            dialog.button(answer.getAnswer(), answer);
-        }
-        dialog.padTop(60f);
+        dialogue = new Dialogue(PersonalityTester.skin, this);
     }
 
     public boolean isFinished(){
         return isFinished;
     }
 
-    public Dialog getDialog(){
-        return dialog;
+    public Dialogue getDialogue(){
+        return dialogue;
+    }
+
+    public String getQuestion(){
+        return question;
+    }
+
+    public Array<Answer> getAnswers(){
+        return answers;
     }
 }
