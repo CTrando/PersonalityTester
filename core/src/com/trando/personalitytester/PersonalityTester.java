@@ -41,8 +41,10 @@ public class PersonalityTester extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-		dialogueSystem.act();
-		dialogueSystem.draw();
+		if(!dialogueSystem.isFinished) {
+			dialogueSystem.act();
+			dialogueSystem.draw();
+		}
 	}
 
 	@Override
@@ -56,19 +58,6 @@ public class PersonalityTester extends ApplicationAdapter {
 		viewport.update(width,height, true);
 		camera.update();
 	}
-/*
-
-	private void nextQuestion(){
-		if(!questions.isEmpty() && dialogueSystem.getActors().size == 0){
-			currentQuestion = questions.poll();
-			currentQuestion.getDialog().show(dialogueSystem);
-		}
-		else if(questions.isEmpty()){
-			currentQuestion = null;
-			getResult();
-		}
-	}
-*/
 
 	private void getResult(){
 		System.out.println("WORKING");

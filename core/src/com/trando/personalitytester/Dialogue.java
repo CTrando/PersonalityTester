@@ -7,9 +7,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.*;
  * Created by Cameron on 3/3/2017.
  */
 public class Dialogue extends Table {
-    Question question;
-    DialogueBox dialogueBox;
-    OptionsBox optionsBox;
+    private Question question;
+    private DialogueBox dialogueBox;
+    private OptionsBox optionsBox;
 
     public Dialogue(Skin skin, Question question){
         super(skin);
@@ -23,6 +23,7 @@ public class Dialogue extends Table {
 
         table.add(optionsBox)
             .expandX()
+            .fillY()
             .right()
             .padBottom(20f);
         table.row();
@@ -35,7 +36,14 @@ public class Dialogue extends Table {
         dialogueBox.animateText();
 
         this.add(table).expand().bottom();
+    }
 
+    public OptionsBox getOptionsBox(){
+        return optionsBox;
+    }
+
+    public DialogueBox getDialogueBox(){
+        return dialogueBox;
     }
 
 

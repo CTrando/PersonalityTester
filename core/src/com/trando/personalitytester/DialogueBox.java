@@ -1,6 +1,6 @@
 package com.trando.personalitytester;
 
-import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.utils.Array;
 
@@ -56,10 +56,16 @@ public class DialogueBox extends Table {
                 copy = copy.substring(1);
                 setText(currentlyShownText.toString());
                 animationTimer = 0.0f;
-                textLabel.pack();
             } else if (copy.length() == 0) {
                 state = ActionState.IDLE;
             }
+        }
+    }
+
+    public void handleInput(int keyCode) {
+        switch (keyCode) {
+            case Input.Keys.ENTER:
+
         }
     }
 

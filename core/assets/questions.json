@@ -4,6 +4,10 @@
             "question": "Hello how are you on this fine day today?",
             "answers": [
                 {
+                    "answer": "You cannot tell me how to feel",
+                    "value": 3
+                },
+                {
                     "answer": "I am doing quite terribly you mindless nincompoop",
                     "value": 1
                 },
@@ -27,14 +31,14 @@
             ]
         },
         {
-            "question": "Hello how are you on this fine day today?",
+            "question": "Are these custom questions, or are these generated through some amazing programming magic?",
             "answers": [
                 {
-                    "answer": "I am doing quite terribly you mindless nincompoop",
+                    "answer": "I have to manually write each of these questions and convert them automatically through JSON magic",
                     "value": 1
                 },
                 {
-                    "answer": "You are doing quite badly today",
+                    "answer": "I am a wizard",
                     "value": 0
                 }
             ]
