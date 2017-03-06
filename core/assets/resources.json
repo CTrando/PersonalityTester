@@ -17,6 +17,6 @@
     "default": { "down": "dialog.9", "up": "dialog.9", "font": "text", "fontColor": "white" }
   },
   "com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle": {
-    "default": { "titleFont": "text", "background": "dialog.9", "titleFontColor": "green" }
+    "default": { "titleFont": "text", "background": "dialog.9", "titleFontColor": "white" }
   }
 }

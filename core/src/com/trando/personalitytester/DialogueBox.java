@@ -65,7 +65,6 @@ public class DialogueBox extends Table {
     public void handleInput(int keyCode) {
         switch (keyCode) {
             case Input.Keys.ENTER:
-
         }
     }
 

@@ -10,17 +10,22 @@ import com.badlogic.gdx.utils.Array;
  * Created by Cameron on 3/3/2017.
  */
 public class OptionsBox extends Table {
-    Array<Answer> answers;
+    Array<Option> options;
     Cell selectedCell;
+    private DialogueBox dialogueBox;
 
-    public OptionsBox(Skin skin, Array<Answer> answers){
+    public OptionsBox(Skin skin, DialogueBox dialogueBox, Array<Option> options) {
         super(skin);
-        this.setBackground("dialog.9");
+        this.options = options;
+        this.dialogueBox = dialogueBox;
 
-        this.answers = answers;
-        initAnswerLabels();
-        selectedCell = this.getCells().first();
-        highlightCell(selectedCell);
+        if (options.size > 0) {
+            this.setBackground("dialog.9");
+
+            initAnswerLabels();
+            selectedCell = this.getCells().first();
+            highlightCell(selectedCell);
+        }
     }
 
     /**
@@ -28,14 +33,14 @@ public class OptionsBox extends Table {
      * Calling .setWrap(true) on your label
      * Putting the label in a parent with a fixed width
      */
-    private void initAnswerLabels(){
-        for(Answer answer: answers){
-            AnswerLabel label = new AnswerLabel(answer, getSkin());
+    private void initAnswerLabels() {
+        for (Option answer : options) {
+            OptionLabel label = new OptionLabel(answer, getSkin());
             label.setWrap(true);
 
             this.add(label)
                 .expand()
-                .width(Gdx.graphics.getWidth()/3)
+                .width(Gdx.graphics.getWidth() / 3)
                 .right()
                 .top()
                 .pad(10f, 25f, 40f, 25f)
@@ -43,17 +48,17 @@ public class OptionsBox extends Table {
         }
     }
 
-    private void highlightCell(Cell cell){
+    private void highlightCell(Cell cell) {
         cell.getActor().addAction(Actions.color(Color.BLUE, 1f));
     }
 
-    private void unHighlightCell(Cell cell){
+    private void unHighlightCell(Cell cell) {
         cell.getActor().clearActions();
         cell.getActor().setColor(Color.WHITE);
     }
 
-    public void handleInput(int keycode){
-        switch(keycode){
+    public void handleInput(int keycode) {
+        switch (keycode) {
             case Input.Keys.DOWN:
                 unHighlightCell(selectedCell);
                 selectedCell = getCellBelow(selectedCell);
@@ -64,35 +69,42 @@ public class OptionsBox extends Table {
                 selectedCell = getCellAbove(selectedCell);
                 highlightCell(selectedCell);
                 break;
+            case Input.Keys.ENTER:
+                if(dialogueBox.isFinished()){
+                    OptionLabel optionLabel = (OptionLabel) this
+                            .getSelectedCell()
+                            .getActor();
+                    TraitHolder.incrementTrait(optionLabel.getTrait(), optionLabel.getValue());
+                }
+                break;
         }
     }
 
     /**
      * These method will only work when the table has one actor per row
+     *
      * @param cell the cell to analyze
      * @return the cell below it in a table
      */
-    private Cell getCellBelow(Cell cell){
+    private Cell getCellBelow(Cell cell) {
         int row = cell.getRow();
         int rows = this.getRows();
 
-        if(row < rows-1){
-            return this.getCells().get(row+1);
-        }
-        else return cell;
+        if (row < rows - 1) {
+            return this.getCells().get(row + 1);
+        } else return cell;
     }
 
-    private Cell getCellAbove(Cell cell){
+    private Cell getCellAbove(Cell cell) {
         int row = cell.getRow();
         int rows = this.getRows();
 
-        if(row != 0){
-            return this.getCells().get(row-1);
-        }
-        else return cell;
+        if (row != 0) {
+            return this.getCells().get(row - 1);
+        } else return cell;
     }
 
-    public Cell getSelectedCell(){
+    public Cell getSelectedCell() {
         return selectedCell;
     }
 }

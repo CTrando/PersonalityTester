@@ -1,0 +1,11 @@
+[
+    {
+        "text": "Hello! This is a personality tester developed in only one week with the Java game framework libGDX! Press enter to continue!"
+    },
+    {
+        "text": "This test will hopefully be able to tell you what your personality is. I am not a licensed psychologist!"
+    },
+    {
+        "text": "Let's begin! Press enter to select an answer, and press the 'up' and 'down' keys to choose answers!"
+    }
+]

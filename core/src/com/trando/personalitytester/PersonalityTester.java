@@ -1,16 +1,11 @@
 package com.trando.personalitytester;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.*;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
+import com.badlogic.gdx.graphics.g2d.*;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.utils.*;
 import com.badlogic.gdx.utils.viewport.*;
-
-import java.util.LinkedList;
 
 public class PersonalityTester extends ApplicationAdapter {
 	DialogueSystem dialogueSystem;
@@ -18,10 +13,10 @@ public class PersonalityTester extends ApplicationAdapter {
 	Viewport viewport;
 	Camera camera;
 
-	Table table;
-
 	static Skin skin;
-	static int value;
+
+
+	public static boolean hasReceivedAnswer;
 
 	@Override
 	public void create () {
@@ -31,15 +26,15 @@ public class PersonalityTester extends ApplicationAdapter {
 		skin = new Skin(Gdx.files.internal("resources.json"));
 
 		dialogueSystem = new DialogueSystem(this);
-		//dialogueSystem.setDebugAll(true);
+		dialogueSystem.setDebugAll(true);
 
 		Gdx.input.setInputProcessor(dialogueSystem);
 	}
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		Gdx.gl.glClearColor(0, 0, 0, .5f);
 
 		if(!dialogueSystem.isFinished) {
 			dialogueSystem.act();

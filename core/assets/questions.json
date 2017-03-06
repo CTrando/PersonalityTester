@@ -1,73 +1,70 @@
-{
-    "questions": [
-        {
-            "question": "Hello how are you on this fine day today?",
-            "answers": [
-                {
-                    "answer": "You cannot tell me how to feel",
-                    "value": 3
-                },
-                {
-                    "answer": "I am doing quite terribly you mindless nincompoop",
-                    "value": 1
-                },
-                {
-                    "answer": "You are doing quite badly today",
-                    "value": 0
-                }
-            ]
-        },
-        {
-            "question": "If you were in a situation where you were unable to walk or talk, what would you do?",
-            "answers": [
-                {
-                    "answer": "Be sad",
-                    "value": 1
-                },
-                {
-                    "answer": "Be happy",
-                    "value": 0
-                }
-            ]
-        },
-        {
-            "question": "Are these custom questions, or are these generated through some amazing programming magic?",
-            "answers": [
-                {
-                    "answer": "I have to manually write each of these questions and convert them automatically through JSON magic",
-                    "value": 1
-                },
-                {
-                    "answer": "I am a wizard",
-                    "value": 0
-                }
-            ]
-        },
-        {
-            "question": "Hello how are you on this fine day today?",
-            "answers": [
-                {
-                    "answer": "I am doing quite terribly you mindless nincompoop",
-                    "value": 1
-                },
-                {
-                    "answer": "You are doing quite badly today",
-                    "value": 0
-                }
-            ]
-        },
-        {
-            "question": "Hello how are you on this fine day today?",
-            "answers": [
-                {
-                    "answer": "I am doing quite terribly you mindless nincompoop",
-                    "value": 1
-                },
-                {
-                    "answer": "You are doing quite badly today",
-                    "value": 0
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "text": "So did you have a nice day yesterday?",
+        "options": [
+            {
+                "option": "I think I did have a nice day yesterday, it was quite enjoyable.",
+                "trait": "calm",
+                "value": 2
+            },
+            {
+                "option": "I can't remember what I did yesterday.",
+                "trait": "neutral",
+                "value": 1
+            },
+            {
+                "option": "I had a terrible day.",
+                "trait": "angry",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "text": "If you missed the bus, how would you react?",
+        "options": [
+            {
+                "option": "Who cares man, I don't need no education.",
+                "trait": "calm",
+                "value": 3
+            },
+            {
+                "option": "Time to get the bike out!",
+                "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "Beat something up to unleash the rage!",
+                "trait": "angry",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "text": "Someone steals your backpack! You see the guy later on, what do you do?",
+        "options": [
+            {
+                "option": "Grab your gang and take him out!",
+                "trait": "angry",
+                "value": 1
+            },
+            {
+                "option": "Ask for it back.",
+                "trait": "calm",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    }
+]
