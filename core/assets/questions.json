@@ -1,5 +1,105 @@
 [
     {
+        "text": "It's New Years Day, and you've decided to make a resolution to lose weight. How does it go?",
+        "options": [
+            {
+                "option": "Give up in the first few days, it's too hard.",
+                "trait": "rash",
+                "value": 1
+            },
+            {
+                "option": "Try harder but ultimately fail because of lack of motivation",
+                "trait": "rash",
+                "value": 1
+            },
+            {
+                "option": "Succeed until the end, because that's how you roll!",
+                "trait": "hardy",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "What kind of pet do you like?",
+        "options": [
+            {
+                "option": "Cats! Meow.",
+                "trait": "quirky",
+                "value": 2
+            },
+            {
+                "option": "Dogs are where it's at!",
+                "trait": "jolly",
+                "value": 1
+            },
+            {
+                "option": "A fish lasts a lifetime.",
+                "trait": "calm",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "You are in the last mile of a marathon, what do you do?",
+        "options": [
+            {
+                "option": "Dance to taunt the people behind you!",
+                "trait": "jolly",
+                "value": 1
+            },
+            {
+                "option": "Power forward!",
+                "trait": "hardy",
+                "value": 2
+            },
+            {
+                "option": "Take it slow and steady to conserve energy.",
+                "trait": "calm",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "What kind of grades do you get in school?",
+        "options": [
+            {
+                "option": "Who needs grades?",
+                "trait": "quirky",
+                "value": 1
+            },
+            {
+                "option": "You don't need to know.",
+                "trait": "hardy",
+                "value": 1
+            },
+            {
+                "option": "Fs because I skip class every day.",
+                "trait": "rash",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "You see a bunch of instruments on the ground, which one do you take?",
+        "options": [
+            {
+                "option": "Electric guitar.",
+                "trait": "rash",
+                "value": 1
+            },
+            {
+                "option": "Indian drums.",
+                "trait": "quirky",
+                "value": 1
+            },
+            {
+                "option": "Ukulele!",
+                "trait": "jolly",
+                "value": 3
+            }
+        ]
+    },
+    {
         "text": "So did you have a nice day yesterday?",
         "options": [
             {
@@ -9,12 +109,12 @@
             },
             {
                 "option": "I can't remember what I did yesterday.",
-                "trait": "neutral",
+                "trait": "quirky",
                 "value": 1
             },
             {
                 "option": "I had a terrible day.",
-                "trait": "angry",
+                "trait": "neutral",
                 "value": 2
             }
         ]
@@ -24,18 +124,18 @@
         "options": [
             {
                 "option": "Who cares man, I don't need no education.",
-                "trait": "calm",
-                "value": 3
+                "trait": "jolly",
+                "value": 2
             },
             {
                 "option": "Time to get the bike out!",
-                "trait": "calm",
+                "trait": "hardy",
                 "value": 1
             },
             {
-                "option": "Beat something up to unleash the rage!",
-                "trait": "angry",
-                "value": 5
+                "option": "Unleash the rage on some other things!",
+                "trait": "rash",
+                "value": 3
             }
         ]
     },
@@ -44,7 +144,12 @@
         "options": [
             {
                 "option": "Grab your gang and take him out!",
-                "trait": "angry",
+                "trait": "rash",
+                "value": 1
+            },
+            {
+                "option": "Go tell a teacher!",
+                "trait": "hardy",
                 "value": 1
             },
             {

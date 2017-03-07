@@ -188,11 +188,9 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">core/assets/dialog.9.png</key>
             <key type="filename">core/assets/gameFont.png</key>
-            <key type="filename">core/assets/myCustomFont_0.png</key>
             <key type="filename">core/assets/resources.png</key>
-            <key type="filename">core/assets/test.png</key>
+            <key type="filename">rawassets/dialog.9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -201,6 +199,7 @@
         <key>fileList</key>
         <array>
             <filename>core/assets</filename>
+            <filename>rawassets/dialog.9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

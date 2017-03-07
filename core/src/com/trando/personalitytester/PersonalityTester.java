@@ -15,7 +15,7 @@ public class PersonalityTester extends ApplicationAdapter {
 
 	static Skin skin;
 
-
+	public static final int NUM_QUESTIONS = 10;
 	public static boolean hasReceivedAnswer;
 
 	@Override
@@ -26,7 +26,7 @@ public class PersonalityTester extends ApplicationAdapter {
 		skin = new Skin(Gdx.files.internal("resources.json"));
 
 		dialogueSystem = new DialogueSystem(this);
-		dialogueSystem.setDebugAll(true);
+		//dialogueSystem.setDebugAll(true);
 
 		Gdx.input.setInputProcessor(dialogueSystem);
 	}

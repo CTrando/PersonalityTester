@@ -76,6 +76,15 @@ public class DialogueSystem extends Stage {
         }
     }
 
+    private void initPreamble(){
+        JsonReader reader = new JsonReader();
+        JsonValue values = reader.parse(Gdx.files.internal("preamble.json"));
+        for (JsonValue value : values.iterator()){
+            dialogues.add(new Text(value));
+        }
+    }
+
+    //do some work with PersonalityTester.NUM_QUESTIONS here
     private void initQuestions() {
         JsonReader reader = new JsonReader();
         JsonValue values = reader.parse(Gdx.files.internal("questions.json"));
@@ -85,17 +94,9 @@ public class DialogueSystem extends Stage {
         }
     }
 
-    private void initPreamble(){
-        JsonReader reader = new JsonReader();
-        JsonValue values = reader.parse(Gdx.files.internal("preamble.json"));
-        for (JsonValue value : values.iterator()){
-            dialogues.add(new Text(value));
-        }
-    }
-
     private void initAnswerText(Trait trait){
         JsonReader reader = new JsonReader();
-        JsonValue values = reader.parse(Gdx.files.internal(trait.toString() +".json"));
+        JsonValue values = reader.parse(Gdx.files.internal("traits/"+ trait.toString() +".json"));
         for (JsonValue value : values.iterator()){
             dialogues.addLast(new Text(value));
         }

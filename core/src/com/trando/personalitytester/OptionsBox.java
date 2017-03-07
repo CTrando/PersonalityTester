@@ -40,16 +40,16 @@ public class OptionsBox extends Table {
 
             this.add(label)
                 .expand()
-                .width(Gdx.graphics.getWidth() / 3)
+                .width(Gdx.graphics.getWidth() / 2)
                 .right()
                 .top()
-                .pad(10f, 25f, 40f, 25f)
+                .pad(10f, 25f, 10f, 25f)
                 .row();
         }
     }
 
     private void highlightCell(Cell cell) {
-        cell.getActor().addAction(Actions.color(Color.BLUE, 1f));
+        cell.getActor().addAction(Actions.color(Color.GRAY));
     }
 
     private void unHighlightCell(Cell cell) {
