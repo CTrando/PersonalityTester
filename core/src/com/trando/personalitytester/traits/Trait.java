@@ -1,4 +1,4 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.traits;
 
 /**
  * Created by Cameron on 3/5/2017.

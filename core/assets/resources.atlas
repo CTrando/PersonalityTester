@@ -1,18 +1,48 @@
+
 resources.png
-size: 512, 568
+size: 1024,1024
 format: RGBA8888
-filter: Linear,Linear
+filter: Nearest,Nearest
 repeat: none
+background
+  rotate: false
+  xy: 0, 117
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
 dialog.9
   rotate: false
   xy: 0, 0
-  size: 265, 56
-  orig: 265, 56
+  size: 263, 54
+  split: 13, 0, 12, 13
+  pad: 0, 0, 14, 14
+  orig: 263, 54
   offset: 0, 0
   index: -1
 gameFont
   rotate: false
-  xy: 0, 56
+  xy: 0, 54
+  size: 501, 63
+  orig: 512, 512
+  offset: 1, 447
+  index: -1
+
+resources2.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+distortionMap
+  rotate: false
+  xy: 512, 256
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+normalMap
+  rotate: false
+  xy: 0, 0
   size: 512, 512
   orig: 512, 512
   offset: 0, 0

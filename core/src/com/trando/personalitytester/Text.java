@@ -1,6 +1,8 @@
 package com.trando.personalitytester;
 
 import com.badlogic.gdx.utils.*;
+import com.trando.personalitytester.dialogue.Dialogue;
+import com.trando.personalitytester.options.Option;
 
 /**
  * Created by Cameron on 2/27/2017.

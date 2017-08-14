@@ -1,10 +1,7 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.dialogue;
 
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.utils.Array;
-
-import javax.swing.*;
 
 /**
  * Created by Cameron on 3/3/2017.

@@ -3,19 +3,21 @@ package com.trando.personalitytester;
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.g2d.*;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.utils.viewport.*;
+import com.trando.personalitytester.dialogue.*;
 
 public class PersonalityTester extends ApplicationAdapter {
-	DialogueSystem dialogueSystem;
-	SpriteBatch batch;
-	Viewport viewport;
-	Camera camera;
+	public DialogueSystem dialogueSystem;
+	public SpriteBatch batch;
+	public Viewport viewport;
+	public Camera camera;
 
 	static Skin skin;
 
-	public static final int NUM_QUESTIONS = 10;
+	private Background background;
+
+	public static final int NUM_QUESTIONS = 2;
 	public static boolean hasReceivedAnswer;
 
 	@Override
@@ -24,6 +26,7 @@ public class PersonalityTester extends ApplicationAdapter {
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		viewport = new ScreenViewport(camera);
 		skin = new Skin(Gdx.files.internal("resources.json"));
+		background = new Background(skin);
 
 		dialogueSystem = new DialogueSystem(this);
 		//dialogueSystem.setDebugAll(true);
@@ -34,7 +37,8 @@ public class PersonalityTester extends ApplicationAdapter {
 	@Override
 	public void render () {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		Gdx.gl.glClearColor(0, 0, 0, .5f);
+		Gdx.gl.glClearColor(1, 1, 1, 1f);
+		background.render(batch);
 
 		if(!dialogueSystem.isFinished) {
 			dialogueSystem.act();

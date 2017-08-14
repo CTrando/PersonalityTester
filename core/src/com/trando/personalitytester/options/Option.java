@@ -1,6 +1,7 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.options;
 
 import com.badlogic.gdx.utils.JsonValue;
+import com.trando.personalitytester.traits.Trait;
 
 /**
  * Created by Cameron on 2/27/2017.

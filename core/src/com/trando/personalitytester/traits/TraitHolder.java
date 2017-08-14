@@ -1,4 +1,4 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.traits;
 
 import java.util.HashMap;
 

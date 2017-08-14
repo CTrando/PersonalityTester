@@ -1,10 +1,12 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.options;
 
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.utils.Array;
+import com.trando.personalitytester.traits.TraitHolder;
+import com.trando.personalitytester.dialogue.DialogueBox;
 
 /**
  * Created by Cameron on 3/3/2017.

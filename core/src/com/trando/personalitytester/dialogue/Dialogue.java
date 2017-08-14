@@ -1,7 +1,9 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.dialogue;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
+import com.trando.personalitytester.*;
+import com.trando.personalitytester.options.OptionsBox;
 
 /**
  * Created by Cameron on 3/3/2017.
