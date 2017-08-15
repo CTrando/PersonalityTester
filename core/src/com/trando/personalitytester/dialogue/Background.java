@@ -16,7 +16,7 @@ public class Background {
     private Skin skin;
 
     private float moveFactor = 0;
-    private float speed = .08f;
+    private float speed = .04f;
 
     private final FileHandle vertexShader = Gdx.files.internal("vertex.glsl");
     private final FileHandle fragmentShader = Gdx.files.internal("fragment.glsl");
@@ -46,7 +46,7 @@ public class Background {
         batch.setShader(shader);
 
         moveFactor += speed*Gdx.graphics.getDeltaTime();
-        moveFactor%=1;
+        moveFactor%=10;
         shader.setUniformf("u_time", moveFactor);
         shader.setUniformi("u_distortion_map", 2);
         shader.setUniformi("u_normal_map", 3);

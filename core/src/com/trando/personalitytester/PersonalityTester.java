@@ -10,7 +10,7 @@ import com.trando.personalitytester.dialogue.*;
 public class PersonalityTester extends ApplicationAdapter {
 	public DialogueSystem dialogueSystem;
 	public SpriteBatch batch;
-	public Viewport viewport;
+	public ScreenViewport viewport;
 	public Camera camera;
 
 	static Skin skin;
@@ -29,7 +29,7 @@ public class PersonalityTester extends ApplicationAdapter {
 		background = new Background(skin);
 
 		dialogueSystem = new DialogueSystem(this);
-		//dialogueSystem.setDebugAll(true);
+		dialogueSystem.setDebugAll(true);
 
 		Gdx.input.setInputProcessor(dialogueSystem);
 	}
@@ -54,6 +54,8 @@ public class PersonalityTester extends ApplicationAdapter {
 
 	@Override
 	public void resize(int width, int height){
+		dialogueSystem.invalidate();
+		dialogueSystem.getViewport().update(width, height, false);
 		viewport.update(width,height, true);
 		camera.update();
 	}

@@ -1,7 +1,7 @@
 package com.trando.personalitytester.dialogue;
 
 import com.badlogic.gdx.*;
-import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.*;
 import com.badlogic.gdx.utils.*;
 import com.trando.personalitytester.*;
 import com.trando.personalitytester.traits.*;
@@ -123,5 +123,12 @@ public class DialogueSystem extends Stage {
 
     private void addDialogue(Dialogue dialogue) {
         this.addActor(dialogue);
+        dialogue.init();
+    }
+
+    public void invalidate() {
+        for(Text text: dialogues) {
+            text.getDialogue().invalidate();
+        }
     }
 }
