@@ -24,8 +24,7 @@ public class Dialogue extends Table {
     }
 
     public void init() {
-        Table table = new Table();
-
+        this.clear();
         if (text.hasOptions()) {
             optionsBox = new OptionsBox(skin, dialogueBox, text.getOptions());
 
@@ -38,18 +37,19 @@ public class Dialogue extends Table {
 
             this.add(dialogueBox)
                 .fillX()
-                .height(100)
+                .minHeight(100)
+                .maxHeight(200)
                 .bottom()
                 .padBottom(10f);
         } else {
             this.add(dialogueBox)
                 .fillX()
                 .expand()
-                .height(100)
+                .minHeight(100)
+                .maxHeight(200)
                 .bottom()
                 .padBottom(10f);
         }
-        //this.add(table).expand().fill();
 
         dialogueBox.animateText();
     }

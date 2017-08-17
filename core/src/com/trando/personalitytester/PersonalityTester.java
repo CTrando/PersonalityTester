@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.utils.viewport.*;
 import com.trando.personalitytester.dialogue.*;
+import com.trando.personalitytester.utils.SoundManager;
 
 public class PersonalityTester extends ApplicationAdapter {
 	public DialogueSystem dialogueSystem;
@@ -13,15 +14,18 @@ public class PersonalityTester extends ApplicationAdapter {
 	public ScreenViewport viewport;
 	public Camera camera;
 
+	public static final boolean DEBUG_MODE = false;
+
 	static Skin skin;
 
 	private Background background;
 
-	public static final int NUM_QUESTIONS = 2;
+	public static final int NUM_QUESTIONS = 8;
 	public static boolean hasReceivedAnswer;
 
 	@Override
 	public void create () {
+		SoundManager.init();
 		batch = new SpriteBatch();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		viewport = new ScreenViewport(camera);
@@ -29,7 +33,10 @@ public class PersonalityTester extends ApplicationAdapter {
 		background = new Background(skin);
 
 		dialogueSystem = new DialogueSystem(this);
-		dialogueSystem.setDebugAll(true);
+
+		if(DEBUG_MODE) {
+			dialogueSystem.setDebugAll(true);
+		}
 
 		Gdx.input.setInputProcessor(dialogueSystem);
 	}

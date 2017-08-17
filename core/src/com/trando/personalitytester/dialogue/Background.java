@@ -28,12 +28,11 @@ public class Background {
         normal.setWrap(Texture.TextureWrap.Repeat, Texture.TextureWrap.Repeat);
         this.distortion = new Texture(Gdx.files.internal("distortionMap.jpg"));
         distortion.setWrap(Texture.TextureWrap.Repeat, Texture.TextureWrap.Repeat);
-   /*     Pixmap pixmap = new Pixmap(500, 500, Pixmap.Format.RGBA8888);
-        pixmap.setColor(1,1,1,.5f);
+        /*Pixmap pixmap = new Pixmap(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), Pixmap.Format.RGBA8888);
+        pixmap.setColor(1,0,0,1);
         pixmap.fill();
         this.background = new TextureRegion(new Texture(pixmap));
-        pixmap.dispose();
-*/
+        pixmap.dispose();*/
         this.background = skin.getRegion("background");
 
         this.shader = new ShaderProgram(vertexShader, fragmentShader);

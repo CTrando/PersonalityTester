@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class DialogueSystem extends Stage {
     //queue (done with a linked list) that will display the Text object to the screen
     private LinkedList<Text> dialogues;
-    //contains all the dialogues fromt the JSON files
+    //contains all the dialogues from the JSON files
     private Array<Text> allDialogues;
 
     private Dialogue currentDialogue;
@@ -35,12 +35,10 @@ public class DialogueSystem extends Stage {
 
     @Override
     public boolean keyDown(int keyCode) {
-        handleInput(keyCode);
         if (currentDialogue.hasOptionsBox()) {
             currentDialogue.getOptionsBox().handleInput(keyCode);
         }
-        currentDialogue.getDialogueBox().handleInput(keyCode);
-
+        handleInput(keyCode);
         return true;
     }
 
@@ -88,7 +86,6 @@ public class DialogueSystem extends Stage {
         }
     }
 
-    //do some work with PersonalityTester.NUM_QUESTIONS here
     private void initQuestions() {
         JsonReader reader = new JsonReader();
         JsonValue values = reader.parse(Gdx.files.internal("questions.json"));
@@ -99,9 +96,14 @@ public class DialogueSystem extends Stage {
             allDialogues.add(new Text(value));
         }
 
+        if(PersonalityTester.NUM_QUESTIONS > allDialogues.size) throw new IllegalStateException("Not enough questions in the bank!");
+
         while(temp < PersonalityTester.NUM_QUESTIONS) {
-            dialogues.add(allDialogues.random());
-            temp++;
+            Text randDialogue = allDialogues.random();
+            if(!dialogues.contains(randDialogue)) {
+                dialogues.add(randDialogue);
+                temp++;
+            }
         }
     }
 
@@ -122,6 +124,7 @@ public class DialogueSystem extends Stage {
     }
 
     private void addDialogue(Dialogue dialogue) {
+        this.clear();
         this.addActor(dialogue);
         dialogue.init();
     }

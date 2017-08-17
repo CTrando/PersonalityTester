@@ -1,4 +1,4 @@
-package com.trando.personalitytester;
+package com.trando.personalitytester.utils;
 
 
 import com.badlogic.gdx.tools.texturepacker.TexturePacker;

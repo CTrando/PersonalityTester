@@ -1,9 +1,9 @@
 [
     {
-        "text": "Hello! This is a personality tester developed in only one week with the Java game framework libGDX! Press enter to continue!"
+        "text": "Hello! This is a personality tester developed with the Java game framework libGDX! This is my second project I've ever done, and it took quite a bit of debugging to get to this point, but it was all worth it in the end! Press enter to continue!"
     },
     {
-        "text": "This test will hopefully be able to tell you what your personality is. I am not a licensed psychologist!"
+        "text": "This test was modeled after the Pokemon Mystery Dungeon Personality Test, and the two look decently similar. In this test, I will hopefully be able to tell you what your personality is. I am not a licensed psychologist!"
     },
     {
         "text": "Let's begin! Press enter to select an answer, and press the 'up' and 'down' keys to choose answers!"

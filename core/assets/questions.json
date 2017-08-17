@@ -1,4 +1,13 @@
 [
+    /* traits:
+        calm
+        hardy
+        jolly
+        neutral
+        quirky
+        rash
+    */
+
     {
         "text": "It's New Years Day, and you've decided to make a resolution to lose weight. How does it go?",
         "options": [
@@ -171,5 +180,199 @@
                 "value": 0
             }
         ]
-    }
+    },
+    {
+        "text": "What is your idea of a good time?",
+        "options": [
+            {
+                "option": "Going out and having a rave party!",
+                "trait": "jolly",
+                "value": 2
+            },
+            {
+                "option": "Having a barbecue with friends.",
+                "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "Breaking that new squat PR at the gym with my bros!!",
+                "trait": "hardy",
+                "value": 10
+            },
+            {
+                "option": "Just sitting in the grass relaxing.",
+                "trait": "calm",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "What is your favorite video game?",
+        "options": [
+            {
+                "option": "Call of Duty!",
+                "trait": "rash",
+                "value": 2
+            },
+            {
+                "option": "Minecraft.",
+                "trait": "jolly",
+                "value": 1
+            },
+            {
+                "option": "Farmville!",
+                "trait": "quirky",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "You're in the movies and someone keeps checking their phone and annoying everyone. What would you do?",
+        "options": [
+            {
+                "option": "Throw some popcorn or a drink at them.",
+                "trait": "rash",
+                "value": 3
+            },
+            {
+                "option": "Ignore them to keep the peace.",
+                "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "Endure, for that is what you have always done.",
+                "trait": "hardy",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "text": "If you had to write a bunch of questions like I do now, how would you do it?",
+        "options": [
+            {
+                "option": "Be lazy and don't do it like I've been doing for the last five months!",
+                "trait": "jolly",
+                "value": 1
+            },
+            {
+                "option": "Do it all at once to get it over with.",
+                "trait": "hardy",
+                "value": 2
+            },
+            {
+                "option": "Just write a program that will take a month to do that will make adding questions super easy!",
+                "trait": "quirky",
+                "value": 3
+            },
+            {
+                "option": "^I wish, I wish.",
+                "trait": "neutral",
+                "value": 1
+            }
+        ]
+    }/*,
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "text": "Are you impressed with my programming magic?",
+        "options": [
+            {
+                "option": "Yes, it is quite nice actually.",
+                "value": 1
+            },
+            {
+                "option": "Could be better.",
+                "value": 0
+            }
+        ]
+    }*/
 ]

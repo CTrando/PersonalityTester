@@ -78,6 +78,7 @@ public class DialogueBox extends Table {
     }
 
     public void forceFinishAnimation() {
+        copy = "";
         currentlyShownText.setLength(text.length());
         currentlyShownText.replace(0, currentlyShownText.length(), text);
         setText(currentlyShownText.toString());
