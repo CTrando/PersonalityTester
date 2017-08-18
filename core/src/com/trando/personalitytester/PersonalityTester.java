@@ -26,6 +26,7 @@ public class PersonalityTester extends ApplicationAdapter {
 	@Override
 	public void create () {
 		SoundManager.init();
+		SoundManager.playMusic("background_music", true, .2f);
 		batch = new SpriteBatch();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		viewport = new ScreenViewport(camera);
