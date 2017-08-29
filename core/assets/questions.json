@@ -270,72 +270,106 @@
                 "value": 1
             }
         ]
+    },
+    {
+        "text": "Did you have breakfast this morning?",
+        "options": [
+            {
+                "option": "Yes.",
+		     "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "No.",
+		     "trait": "rash",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "text": "If you were looking for a house, what kind of house would you get?",
+        "options": [
+            {
+                "option": "A nice quaint house out in the woods.",
+                "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "Something nice in the city for some prime real estate!",
+                "trait": "rash",
+                "value": 2
+            },
+            {
+                "option": "I live in a cave.",
+                "trait": "quirky",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "You are writing essays for your college applications, how do you write them?",
+        "options": [
+            {
+                "option": "Be honest about your faults and try to express your personality.",
+                "trait": "calm",
+                "value": 1
+            },
+            {
+                "option": "Write a pun filled masterpiece!",
+                "trait": "jolly",
+                "value": 2
+            },
+            {
+                "option": "Write the way you were told by your teachers to highlight your good character traits.",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "You have recently come into a large sum of money and your friend asks you for some. What do you do?",
+        "options": [
+            {
+                "option": "Draft an agreement and have it notarized, dictating how much is given and how the money will be repaid.",
+                "trait": "calm",
+                "value": 3
+            },
+            {
+                "option": "Just hand it over! It's your friend right?!",
+                "trait": "rash",
+                "value": 2
+            },
+            {
+                "option": "Laugh in his face and spend it all for yourself.",
+                "trait": "quirky",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "text": "What is your favorite catchphrase?",
+        "options": [
+            {
+                "option": "Believe it!",
+                "trait": "rash",
+                "value": 2
+            },
+            {
+                "option": "Work hard. Play hard.!",
+                "trait": "hardy",
+                "value": 2
+            },
+            {
+                "option": "I am Groot.",
+                "trait": "quirky",
+                "value": 1
+            },
+            {
+                "option": "It's time to D-d-d-d-dddddddddddduel!",
+                "trait": "quirky",
+                "value": 3
+            }
+        ]
     }/*,
-    {
-        "text": "Are you impressed with my programming magic?",
-        "options": [
-            {
-                "option": "Yes, it is quite nice actually.",
-                "value": 1
-            },
-            {
-                "option": "Could be better.",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "text": "Are you impressed with my programming magic?",
-        "options": [
-            {
-                "option": "Yes, it is quite nice actually.",
-                "value": 1
-            },
-            {
-                "option": "Could be better.",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "text": "Are you impressed with my programming magic?",
-        "options": [
-            {
-                "option": "Yes, it is quite nice actually.",
-                "value": 1
-            },
-            {
-                "option": "Could be better.",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "text": "Are you impressed with my programming magic?",
-        "options": [
-            {
-                "option": "Yes, it is quite nice actually.",
-                "value": 1
-            },
-            {
-                "option": "Could be better.",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "text": "Are you impressed with my programming magic?",
-        "options": [
-            {
-                "option": "Yes, it is quite nice actually.",
-                "value": 1
-            },
-            {
-                "option": "Could be better.",
-                "value": 0
-            }
-        ]
-    },
     {
         "text": "Are you impressed with my programming magic?",
         "options": [
